@@ -52,7 +52,7 @@ Skydine is a React application for ordering food and drinks on a plane. The app 
     ```
 
 4. Set up environment variables:
-    Create a `.env` file in the `frontend` directory and add the following variables:
+    Create a `.env` file in the `backend` directory and add the following variables:
     ```env
     FRONTEND_URL=http://localhost:3000
     ```
