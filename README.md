@@ -87,3 +87,15 @@ The API is documented using Swagger. After starting the backend server, you can 
   - `GET /labels`: Get a list of tags
 
 
+## Snapshots
+
+## Login Page
+![login](https://github.com/singhjyotiraditya/Skydine/assets/96012244/7712ec77-239c-409f-9408-806f49370390)
+
+## Home Page
+![image](https://github.com/singhjyotiraditya/Skydine/assets/96012244/5ca9f9c5-2ebc-4f05-ba9b-4a0580925075)
+
+## Responsive
+![Responsive](https://github.com/singhjyotiraditya/Skydine/assets/96012244/06798693-a1c8-49fd-b55a-8a5c7eb3bb9b)
+
+
