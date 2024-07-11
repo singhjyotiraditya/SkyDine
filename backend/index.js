@@ -283,7 +283,7 @@ const paginate = (req, res, next) => {
 
 
 app.get("/labels", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000, https://skydine-one.vercel.app/");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
@@ -297,7 +297,7 @@ app.get("/meals", paginate, (req, res) => {
   const endIndex = page * limit;
   const paginatedMeals = dataset.meals.slice(startIndex, endIndex);
   
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000, https://skydine-one.vercel.app/");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
