@@ -6,7 +6,7 @@ import TagList from "./components/TagList";
 import PersonList from "./components/PersonList";
 import SelectedMeals from "./components/SelectedMeals";
 import Login from "./components/Login";
-
+import LoadingBar from "./components/LoadingBar"; 
 
 const App = () => {
   const [meals, setMeals] = useState([]);
@@ -35,14 +35,14 @@ const App = () => {
   });
   const [currentPage, setCurrentPage] = useState(1);
   const [mealsPerPage, setMealsPerPage] = useState(3);
+  const [loadingMeals, setLoadingMeals] = useState(true); 
+  const [loadingTags, setLoadingTags] = useState(true); 
 
-
-  
   console.log("API URL:", process.env.REACT_APP_API_URL);
 
-  
   const fetchMeals = async (credentials) => {
     const { username, password } = credentials;
+    setLoadingMeals(true); 
     try {
       const result = await axios.get(`${process.env.REACT_APP_API_URL}/meals`, {
         auth: { username, password },
@@ -51,11 +51,14 @@ const App = () => {
       setMeals(result.data);
     } catch (error) {
       console.error("Error fetching meals:", error);
+    } finally {
+      setLoadingMeals(false); 
     }
   };
 
   const fetchTags = async (credentials) => {
     const { username, password } = credentials;
+    setLoadingTags(true); // Start loading tags
     try {
       const result = await axios.get(`${process.env.REACT_APP_API_URL}/labels`, {
         auth: { username, password },
@@ -63,6 +66,8 @@ const App = () => {
       setTags(result.data);
     } catch (error) {
       console.error("Error fetching tags:", error);
+    } finally {
+      setLoadingTags(false); 
     }
   };
 
@@ -85,7 +90,6 @@ const App = () => {
   const handleSelectPerson = (personId) => {
     setSelectedPerson(personId);
   };
-
 
   const handleSelectMeal = (mealId, selectedDrink) => {
     if (!selectedPerson) return;
@@ -130,7 +134,6 @@ const App = () => {
 
   const selectedMeals = selectedPerson ? personMeals[selectedPerson] || [] : [];
 
-  console.log(filteredMeals.length);
   const totalPages = Math.ceil(filteredMeals.length / mealsPerPage);
   const lastPostIndex = currentPage * mealsPerPage;
   const firstPostIndex = lastPostIndex - mealsPerPage;
@@ -151,6 +154,7 @@ const App = () => {
 
   return (
     <div className="App">
+      {(loadingMeals || loadingTags) && <LoadingBar />} 
       <TagList tags={tags} onSelectTag={handleSelectTag} />
       <div className="bottom">
         <div className="left">
