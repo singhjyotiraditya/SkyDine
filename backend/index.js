@@ -3,9 +3,10 @@ const basicAuth = require("express-basic-auth");
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
 const cors = require("cors");
+require('dotenv').config();
 
 const corsOptions = {
-  origin: "http://localhost:4000",
+  origin: process.env.FRONTEND_URL,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
@@ -283,7 +284,7 @@ const paginate = (req, res, next) => {
 
 
 app.get("/labels", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000, https://skydine-one.vercel.app/");
+  res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
@@ -296,8 +297,8 @@ app.get("/meals", paginate, (req, res) => {
   const startIndex = (page - 1) * limit;
   const endIndex = page * limit;
   const paginatedMeals = dataset.meals.slice(startIndex, endIndex);
-  
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000, https://skydine-one.vercel.app/");
+   
+  res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
