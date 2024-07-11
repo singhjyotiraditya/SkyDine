@@ -1,0 +1,57 @@
+.person-card {
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.person-card h3 {
+  margin: 0px;
+  font-size: 1.2em;
+}
+
+.person-card p {
+  color: #666;
+  margin: 0px;
+}
+
+.person-card img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.person-image {
+  display: flex;
+  align-items: center;
+}
+
+.seat-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.select-meal {
+  display: flex;
+  align-items: center;
+}
+
+.select-meal button {
+  background-color: white;
+  color: black;
+  padding: 12px 17px;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 9px;
+  border: 0;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0px 0px 37px -3px rgba(112, 112, 112, 0.1);
+}
+
+.select-meal button.active {
+  background-color: #eb3254;
+  color: white;
+}

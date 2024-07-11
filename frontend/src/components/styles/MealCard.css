@@ -1,0 +1,92 @@
+.meal-card {
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: auto;
+}
+
+.meal-header {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+
+.meal-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.meal-img-container {
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.meal-img {
+  width: 80%;
+  height: 80%;
+  object-fit: fill;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.meal-details {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.meal-details h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.select-btn {
+  background-color: transparent;
+  width: 200px;
+  height: 35px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #eb3254;
+  border: 2px solid #eb3254;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.select-btn-container {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.select-btn:hover {
+  background-color: #eb3254;
+  color: white;
+}
+
+.meal-price {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.dollar-sign {
+  font-size: 17px !important;
+  color: rgb(65, 173, 65);
+}
+
+@media only screen and (max-width: 480px) {
+}

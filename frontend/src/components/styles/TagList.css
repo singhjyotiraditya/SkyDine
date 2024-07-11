@@ -1,0 +1,26 @@
+.tag-list {
+  display: flex;
+  gap: 20px;
+}
+
+.tag-container {
+  /* background-color: white; */
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 10px;
+  background: transparent;
+  scrollbar-color: transparent transparent;
+}
+
+.tag-main {
+  display: flex;
+  justify-content: center;
+}
+
+.tag-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}

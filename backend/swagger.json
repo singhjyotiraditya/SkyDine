@@ -1,0 +1,132 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Food Order API",
+      "version": "1.0.0"
+    },
+    "host": "localhost:4000",
+    "basePath": "/",
+    "schemes": ["http"],
+    "paths": {
+      "/labels": {
+        "get": {
+          "summary": "Get all labels",
+          "responses": {
+            "200": {
+              "description": "A list of labels",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/Label"
+                }
+              }
+            }
+          },
+          "security": [{
+            "basicAuth": []
+          }]
+        }
+      },
+      "/meals": {
+        "get": {
+          "summary": "Get paginated meals",
+          "parameters": [
+            {
+              "name": "page",
+              "in": "query",
+              "type": "integer",
+              "description": "Page number"
+            },
+            {
+              "name": "limit",
+              "in": "query",
+              "type": "integer",
+              "description": "Number of items per page"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "A list of meals",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/Meal"
+                }
+              }
+            }
+          },
+          "security": [{
+            "basicAuth": []
+          }]
+        }
+      }
+    },
+    "definitions": {
+      "Label": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          }
+        }
+      },
+      "Meal": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "starter": {
+            "type": "string"
+          },
+          "desert": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "labels": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "img": {
+            "type": "string"
+          },
+          "drinks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/Drink"
+            }
+          }
+        }
+      },
+      "Drink": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "securityDefinitions": {
+      "basicAuth": {
+        "type": "basic"
+      }
+    }
+  }
+  

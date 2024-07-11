@@ -1,0 +1,23 @@
+.tag-card {
+  width: 90px;
+  height: 90px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 37px -3px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+}
+
+.tag-image {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+.tag-title {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
