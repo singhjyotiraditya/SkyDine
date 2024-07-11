@@ -283,6 +283,10 @@ const paginate = (req, res, next) => {
 
 
 app.get("/labels", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+
   res.json(dataset.labels);
 });
 
@@ -292,6 +296,11 @@ app.get("/meals", paginate, (req, res) => {
   const startIndex = (page - 1) * limit;
   const endIndex = page * limit;
   const paginatedMeals = dataset.meals.slice(startIndex, endIndex);
+  
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+
   res.json(paginatedMeals);
 });
 
