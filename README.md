@@ -91,6 +91,41 @@ The API is documented using Swagger. After starting the backend server, you can 
 - **Tags**
   - `GET /labels`: Get a list of tags
 
+# Skydine Website Walkthrough
+
+## Logging In
+### Login Credentials
+- **Username**: admin
+- **Password**: password
+- Click on the "Login" button to access the website.
+
+## Main Dashboard
+### Tag Filtering
+- On the main dashboard, you'll find tags such as pork, beef, kid, veg, etc., to filter meals accordingly.
+- Click on these tags to view meals specific to each category.
+- Click on the "All" tag to view all available meals.
+
+### Pagination
+- Meals are divided into multiple pages for easier navigation.
+- Navigate through pages using the pagination controls.
+
+## Selecting Passengers and Meals
+### Select Passengers
+- Choose the passenger(s) for whom you wish to select meals.
+- Use select button to indicate the passengers.
+
+### Meal Selection
+- For each selected passenger, choose the desired meal(s) from the available options.
+- Optionally, select drinks for each passenger as well.
+
+## Total Price Calculation
+### Calculate Total Price
+- After selecting meals and drinks for all desired passengers, the total price of the selected items will be automatically calculated and displayed.
+
+### Review and Confirm
+- Review the selected meals and total price.
+- Make any adjustments if needed.
+
 
 ## Snapshots
 
