@@ -2,6 +2,11 @@
 
 Skydine is a React application for ordering food and drinks on a plane. The app allows users to view a list of meals, filter meals by tags, select meals for different people, and see the total price of selected meals and drinks.
 
+## [Frontend Deployment Link](https://skydine-one.vercel.app)
+## [Backend Deployment Link](https://skydine-api.onrender.com)
+## [API Documentation](https://skydine-api.onrender.com/api-docs/)
+## [Website Walkthrough Video](https://www.veed.io/view/9b4ee1c1-704a-4f84-906d-804ec5909ce6?panel=share)
+
 ## Features
 
 - Display a list of available meals with images and basic information
