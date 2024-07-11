@@ -51,7 +51,13 @@ Skydine is a React application for ordering food and drinks on a plane. The app 
     npm install
     ```
 
-4. Start the backend server:
+4. Set up environment variables:
+    Create a `.env` file in the `frontend` directory and add the following variables:
+    ```env
+    FRONTEND_URL=http://localhost:3000
+    ```
+
+5. Start the backend server:
     ```sh
     npm start
     ```
@@ -68,13 +74,13 @@ Skydine is a React application for ordering food and drinks on a plane. The app 
     npm install
     ```
 
-4. Set up environment variables:
+3. Set up environment variables:
     Create a `.env` file in the `frontend` directory and add the following variables:
     ```env
     REACT_APP_API_URL=http://localhost:4000
     ```
 
-3. Start the frontend development server:
+4. Start the frontend development server:
     ```sh
     npm start
     ```
