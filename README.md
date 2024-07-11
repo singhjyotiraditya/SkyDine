@@ -79,6 +79,12 @@ Skydine is a React application for ordering food and drinks on a plane. The app 
 
 The application should now be running on `http://localhost:3000` (frontend) and `http://localhost:4000` (backend).
 
+### Login Information
+
+**_NOTE:_** While logging in, use the following credentials:
+- **Username**: `admin`
+- **Password**: `password`
+
 ## API Specification
 
 The API is documented using Swagger. After starting the backend server, you can access the Swagger documentation at `http://localhost:4000/api`.
